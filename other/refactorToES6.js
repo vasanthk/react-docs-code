@@ -121,6 +121,7 @@ class ExampleContent extends React.Component {
 class ExampleContent extends React.Component {
     constructor() {
         super();
+        // In ES6 class methods aren't autobound, so you need to bind it manually. You can either use .bind(this), or use arrow functions.
         this._handleClick = this._handleClick.bind(this);
         // refactor away your `getInitialState` method by moving its return value to be assigned to the `this.state` instance variable in your class' constructor
         this.state = Store.getState();
