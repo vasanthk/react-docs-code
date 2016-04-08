@@ -11,9 +11,20 @@ var person = React.createElement(
 // Boolean Expressions
 
 // These two are equivalent in JSX for disabling a button
-<input type="button" disabled />;
-<input type="button" disabled={true} />;
+<input type="button" disabled/>;
+<input type="button" disabled={true}/>;
 
 // And these two are equivalent in JSX for not disabling a button
-<input type="button" />;
-<input type="button" disabled={false} />;
+<input type="button"/>;
+<input type="button" disabled={false}/>;
+
+// Child Expressions
+
+// Input (JSX):
+var content = <Container>{window.isLoggedIn ? <Nav /> : <Login />}</Container>;
+// Output (JS):
+var content = React.createElement(
+  Container,
+  null,
+  window.isLoggedIn ? React.createElement(Nav) : React.createElement(Login)
+);
