@@ -19,5 +19,8 @@
 // As a last resort, you always have the ability to insert raw HTML.
 <div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}} />
 
+// Custom HTML Attributes
+<div data-custom-attribute="foo" />
+
 // Web Accessibility attributes starting with aria- will be rendered properly.
 <div aria-hidden={true} />
