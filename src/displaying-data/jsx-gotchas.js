@@ -16,5 +16,8 @@
 // You can use mixed arrays with strings and JSX elements.
 <div>{['First ', <span>&middot;</span>, ' Second']}</div>
 
+// As a last resort, you always have the ability to insert raw HTML.
+<div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}} />
+
 // Web Accessibility attributes starting with aria- will be rendered properly.
 <div aria-hidden={true} />
