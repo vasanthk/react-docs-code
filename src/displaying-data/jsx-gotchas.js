@@ -13,5 +13,8 @@
 <div>{'First \u00b7 Second'}</div>
 <div>{'First ' + String.fromCharCode(183) + ' Second'}</div>
 
+// You can use mixed arrays with strings and JSX elements.
+<div>{['First ', <span>&middot;</span>, ' Second']}</div>
+
 // Web Accessibility attributes starting with aria- will be rendered properly.
 <div aria-hidden={true} />
