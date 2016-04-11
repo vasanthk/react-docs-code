@@ -7,5 +7,11 @@
 // Unicode characters directly in JavaScript
 <div>{'First · Second'}</div>
 
+// A safer alternative is to find the unicode number corresponding to the entity
+// and use it inside of a JavaScript string.
+
+<div>{'First \u00b7 Second'}</div>
+<div>{'First ' + String.fromCharCode(183) + ' Second'}</div>
+
 // Web Accessibility attributes starting with aria- will be rendered properly.
 <div aria-hidden={true} />
