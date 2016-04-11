@@ -10,6 +10,8 @@ var person = React.createElement(
 
 // Boolean Expressions
 
+// Omitting the value of an attribute causes JSX to treat it as true. To pass false an attribute expression must be used.
+
 // These two are equivalent in JSX for disabling a button
 <input type="button" disabled/>;
 <input type="button" disabled={true}/>;
