@@ -20,6 +20,8 @@
 <div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}} />
 
 // Custom HTML Attributes
+// If you pass properties to native HTML elements that do not exist in the HTML specification, React will not render them.
+// If you want to use a custom attribute, you should prefix it with data-.
 <div data-custom-attribute="foo" />
 
 // Web Accessibility attributes starting with aria- will be rendered properly.
