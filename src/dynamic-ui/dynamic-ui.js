@@ -1,5 +1,14 @@
 /**
  * Dynamic UI
+ *
+ * What Should Go in State?
+ * - State should contain data that a component's event handlers may change to trigger a UI update.
+ *
+ * What Shouldn't Go in State?
+ * - Computed data
+ * - React components
+ * - Duplicated data from props
+ *
  */
 
 
