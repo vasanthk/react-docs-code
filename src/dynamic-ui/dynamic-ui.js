@@ -8,6 +8,8 @@
  * - Computed data
  * - React components
  * - Duplicated data from props
+ *      -- One valid use to store props in state is to be able to know its previous values,
+ *         because props may change as the result of a parent component re-rendering.
  *
  */
 
