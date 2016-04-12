@@ -24,5 +24,8 @@
 // If you want to use a custom attribute, you should prefix it with data-.
 <div data-custom-attribute="foo" />
 
+// However, arbitrary attributes are supported on custom elements (those with a hyphen in the tag name or an is="..." attribute).
+<x-my-component custom-attribute="foo" />
+
 // Web Accessibility attributes starting with aria- will be rendered properly.
 <div aria-hidden={true} />
