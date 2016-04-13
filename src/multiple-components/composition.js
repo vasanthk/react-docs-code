@@ -1,3 +1,10 @@
+/**
+ * Composition
+ *
+ * Note:
+ * Reconciliation is the process by which React updates the DOM with each new render pass.
+ */
+
 var Avatar = React.createClass({
   render: function () {
     return (
