@@ -38,3 +38,20 @@ ReactDOM.render(
   <Avatar pagename="Engineering"/>,
   document.getElementById('example')
 );
+
+/**
+ * Dynamic Children
+ */
+
+var Dynamic = React.createClass({
+  render: function () {
+    var results = this.props.results;
+    return (
+      <ol>
+        {results.map(function (result) {
+          return <li key={result.id}>{result.text}</li>;
+        })}
+      </ol>
+    );
+  }
+});
