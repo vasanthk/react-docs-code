@@ -55,3 +55,38 @@ var Dynamic = React.createClass({
     );
   }
 });
+
+// WRONG!
+var ListItemWrapper = React.createClass({
+  render: function () {
+    return <li key={this.props.data.id}>{this.props.data.text}</li>;
+  }
+});
+var MyComponent = React.createClass({
+  render: function () {
+    return (
+      <ul>
+        {this.props.results.map(function (result) {
+          return <ListItemWrapper data={result}/>;
+        })}
+      </ul>
+    );
+  }
+});
+// Correct :)
+var ListItemWrapper = React.createClass({
+  render: function () {
+    return <li>{this.props.data.text}</li>;
+  }
+});
+var MyComponent = React.createClass({
+  render: function () {
+    return (
+      <ul>
+        {this.props.results.map(function (result) {
+          return <ListItemWrapper key={result.id} data={result}/>;
+        })}
+      </ul>
+    );
+  }
+});
