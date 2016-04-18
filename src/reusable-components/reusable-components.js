@@ -12,5 +12,13 @@ var MyComponent = React.createClass({
       </div>
     );
   }
+});
 
+// Default prop values
+var ComponentWithDefaultProps = React.createClass({
+  getDefaultProps: function () {
+    return {
+      value: 'default value'
+    };
+  }
 });
